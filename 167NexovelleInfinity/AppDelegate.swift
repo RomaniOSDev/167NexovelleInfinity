@@ -13,8 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        configureWeatherChromeAppearance()
         return true
+    }
+
+    private func configureWeatherChromeAppearance() {
+        let navAppearance = UINavigationBarAppearance()
+        navAppearance.configureWithTransparentBackground()
+        navAppearance.backgroundColor = .clear
+        navAppearance.shadowColor = .clear
+        navAppearance.backgroundEffect = nil
+
+        let navBar = UINavigationBar.appearance()
+        navBar.standardAppearance = navAppearance
+        navBar.scrollEdgeAppearance = navAppearance
+        navBar.compactAppearance = navAppearance
+        navBar.compactScrollEdgeAppearance = navAppearance
+
+        UIScrollView.appearance().backgroundColor = .clear
     }
 
     // MARK: UISceneSession Lifecycle

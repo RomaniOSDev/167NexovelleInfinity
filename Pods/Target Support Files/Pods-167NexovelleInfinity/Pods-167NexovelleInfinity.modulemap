@@ -1,0 +1,6 @@
+framework module Pods_167NexovelleInfinity {
+  umbrella header "Pods-167NexovelleInfinity-umbrella.h"
+
+  export *
+  module * { export * }
+}
