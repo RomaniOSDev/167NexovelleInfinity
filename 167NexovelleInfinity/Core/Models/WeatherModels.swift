@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import CoreGraphics
 import Foundation
 
 struct WeatherAlertItem: Codable, Identifiable, Equatable {

@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import SwiftUI
 import UIKit
 
@@ -210,7 +211,8 @@ struct Feature3View: View {
         draft.resetDraft()
 
         savePulse = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(0.45))
             savePulse = false
         }
 

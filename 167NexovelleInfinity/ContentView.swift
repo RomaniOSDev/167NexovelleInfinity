@@ -3,8 +3,9 @@
 //  167NexovelleInfinity
 //
 
-import SwiftUI
 import Combine
+import Foundation
+import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var store = AppStorageStore.shared

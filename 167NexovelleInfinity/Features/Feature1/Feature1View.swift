@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import SwiftUI
 
 struct Feature1View: View {
@@ -101,7 +102,8 @@ struct Feature1View: View {
                 confirmationPulse = true
             }
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.05) {
+            Task { @MainActor in
+                try? await Task.sleep(for: .seconds(1.05))
                 confirmationPulse = false
                 spotlightIdentifier = nil
             }

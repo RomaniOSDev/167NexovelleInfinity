@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import SwiftUI
 
 struct HomeView: View {

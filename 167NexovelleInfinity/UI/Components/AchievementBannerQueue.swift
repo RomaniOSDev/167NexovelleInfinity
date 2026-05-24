@@ -4,6 +4,7 @@
 //
 
 import Combine
+import Foundation
 import SwiftUI
 
 @MainActor
@@ -33,7 +34,8 @@ final class AchievementBannerQueue: ObservableObject {
         isAnimating = true
         activeBannerText = next
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+        Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .seconds(2.0))
             guard let self else { return }
             self.activeBannerText = nil
             self.isAnimating = false

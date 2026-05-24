@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import SwiftUI
 
 struct AlertComposerSheet: View {
@@ -229,7 +230,7 @@ struct AlertComposerSheet: View {
 
         dismiss()
 
-        DispatchQueue.main.async {
+        Task { @MainActor in
             let payload: [String: Any] = [
                 "id": alert.id.uuidString,
                 "isNew": isNew,

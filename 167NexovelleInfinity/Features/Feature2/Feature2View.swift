@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import SwiftUI
 
 struct Feature2View: View {
@@ -154,7 +155,8 @@ struct Feature2View: View {
             showSuccessPulse = true
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(0.55))
             showSuccessPulse = false
         }
     }
@@ -166,7 +168,8 @@ struct Feature2View: View {
         FeedbackCentral.celebrateWorkflowCompletion()
 
         weeklyPulse = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(0.45))
             weeklyPulse = false
         }
     }

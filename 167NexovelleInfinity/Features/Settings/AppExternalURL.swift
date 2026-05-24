@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import UIKit
 
 /// Central place for outbound links shown from Settings (replace example.com with production URLs).

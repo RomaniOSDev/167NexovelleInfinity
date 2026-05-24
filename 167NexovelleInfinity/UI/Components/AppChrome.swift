@@ -3,6 +3,7 @@
 //  167NexovelleInfinity
 //
 
+import Foundation
 import SwiftUI
 
 struct LayeredWeatherBackground: View {
@@ -236,7 +237,8 @@ struct PulseAccentOverlay: ViewModifier {
                     return
                 }
                 animate = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                Task { @MainActor in
+                    try? await Task.sleep(for: .seconds(0.45))
                     animate = false
                 }
             }
