@@ -29,6 +29,7 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .clipped()
+        .ignoresSafeArea()
         .background(Color.clear)
         .environmentObject(store)
         .environmentObject(bannerQueue)

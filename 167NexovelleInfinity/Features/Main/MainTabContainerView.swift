@@ -21,6 +21,7 @@ struct MainTabContainerView: View {
                     .background(Color.clear)
                     .toolbarBackground(.hidden, for: .navigationBar)
                     .toolbarBackground(Color.clear, for: .navigationBar)
+                    .toolbar(.hidden, for: .navigationBar)
                 case .alerts:
                     NavigationStack {
                         WeatherScreenRoot {
@@ -30,6 +31,7 @@ struct MainTabContainerView: View {
                     .background(Color.clear)
                     .toolbarBackground(.hidden, for: .navigationBar)
                     .toolbarBackground(Color.clear, for: .navigationBar)
+                    .toolbar(.hidden, for: .navigationBar)
                 case .planner:
                     NavigationStack {
                         WeatherScreenRoot {
@@ -39,6 +41,7 @@ struct MainTabContainerView: View {
                     .background(Color.clear)
                     .toolbarBackground(.hidden, for: .navigationBar)
                     .toolbarBackground(Color.clear, for: .navigationBar)
+                    .toolbar(.hidden, for: .navigationBar)
                 case .achievements:
                     NavigationStack {
                         WeatherScreenRoot {
@@ -48,6 +51,7 @@ struct MainTabContainerView: View {
                     .background(Color.clear)
                     .toolbarBackground(.hidden, for: .navigationBar)
                     .toolbarBackground(Color.clear, for: .navigationBar)
+                    .toolbar(.hidden, for: .navigationBar)
                 case .settings:
                     NavigationStack {
                         WeatherScreenRoot {
@@ -57,6 +61,7 @@ struct MainTabContainerView: View {
                     .background(Color.clear)
                     .toolbarBackground(.hidden, for: .navigationBar)
                     .toolbarBackground(Color.clear, for: .navigationBar)
+                    .toolbar(.hidden, for: .navigationBar)
                 }
             }
             .transaction { transaction in
